@@ -13,7 +13,7 @@ import brandsData from "../../mockdata/brandsData";
 
 const SelectBrand: FC = () => {
     // const {data: brands = [], isLoading} = useGetCarBrandsQuery(100)
-    const {isLoading} = useGetCarBrandsQuery(100)
+    // const {isLoading} = useGetCarBrandsQuery(100)
     const brands = brandsData
     const brandsSelected = useAppSelector(state => state.brands.list);
     const modelsOptions = useAppSelector(state => state.modelsOptions.list);
@@ -56,7 +56,7 @@ const SelectBrand: FC = () => {
         mode: 'multiple',
         style: {width: '100%'},
         size: 'large',
-        loading: isLoading,
+        // loading: isLoading,
         // value,
         // options: data,
         placeholder: 'Выберите марку...',
