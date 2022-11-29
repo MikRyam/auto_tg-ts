@@ -9,11 +9,12 @@ import {addModelOption, clearModelsOptions, removeModelOptionByBrand} from "../.
 import {clearModels, removeModelByBrand} from "../../store/car/slices/modelSlice";
 import {useGetCarBrandsQuery} from "../../store/car/car.api";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
-// import brandsData from "../mockdata/brandsData";
+import brandsData from "../../mockdata/brandsData";
 
 const SelectBrand: FC = () => {
-    const {data: brands = [], isLoading} = useGetCarBrandsQuery(100)
-    // const brands = brandsData
+    // const {data: brands = [], isLoading} = useGetCarBrandsQuery(100)
+    const {isLoading} = useGetCarBrandsQuery(100)
+    const brands = brandsData
     const brandsSelected = useAppSelector(state => state.brands.list);
     const modelsOptions = useAppSelector(state => state.modelsOptions.list);
     const dispatch = useAppDispatch()
