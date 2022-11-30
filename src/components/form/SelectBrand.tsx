@@ -7,7 +7,7 @@ import {ICarModel} from "../../store/car/types/carModel.type";
 import {IBrandModel} from "../../store/car/types/brandModel.type";
 import {addModelOption, clearModelsOptions, removeModelOptionByBrand} from "../../store/car/slices/modelOptionSlice";
 import {clearModels, removeModelByBrand} from "../../store/car/slices/modelSlice";
-import {useGetCarBrandsQuery} from "../../store/car/car.api";
+// import {useGetCarBrandsQuery} from "../../store/car/car.api";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import brandsData from "../../mockdata/brandsData";
 
